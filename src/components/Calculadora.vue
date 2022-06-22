@@ -1,5 +1,6 @@
 <template>
-    <div class="">
+    <div class="fundo">
+          <h1 class="Titulo">Calculadora</h1>
         <div class="calculator">
             <div class="display px-4">{{display}}</div>
             <div @click="limpar()" class="numero ">C</div>
@@ -23,7 +24,7 @@
             <div @click="result()" class="numero">=</div>
             <div class="text-end mr-15 numero">{{igual}}</div>
         </div>
-      <h1>Calculadora</h1>
+     
     </div>
 </template>
 
@@ -170,6 +171,16 @@ text-align: center;
 margin-left: -10px;
 padding-top: 60px;
 cursor: pointer;
+}
+
+.Titulo {
+    color: #242d2e;
+    font-family: auto;
+}
+
+.fundo {
+background-color: #70757aa4;
+height: 100%;
 }
 
 
