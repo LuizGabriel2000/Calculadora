@@ -2,27 +2,26 @@
     <div class="fundo">
           <h1 class="Titulo">Calculadora</h1>
         <div class="calculator">
-            <div class="display px-4">{{display}}</div>
+            <div class="display px-4">{{igual}} {{tipo}} {{display}}</div>
             <div @click="limpar()" class="numero ">C</div>
             <div @click="limparTudo()" class="numero ">CE</div>
-            <div @click="porcemtagem()" class="numero ">%</div>
-            <div @click="divisao()"  class="numero">/</div>
+            <div @click="conta('%')" class="numero ">%</div>
+            <div @click="conta('/')"  class="numero">/</div>
             <div @click="numero('7')" class="numero">7</div>
             <div @click="numero('8')" class="numero">8</div>
             <div @click="numero('9')" class="numero">9</div>
-            <div @click="vezes()"  class="numero">x</div>
+            <div @click="vezes('x')"  class="numero">x</div>
             <div @click="numero('4')" class="numero">4</div>
             <div @click="numero('5')" class="numero">5</div>
             <div @click="numero('6')" class="numero">6</div>
-            <div @click="menos()" class="numero">-</div>
+            <div @click="conta('-')" class="numero">-</div>
             <div @click="numero('1')" class="numero">1</div>
             <div @click="numero('2')" class="numero">2</div>
             <div @click="numero('3')" class="numero">3</div>
-            <div @click="mais()" class="numero">+</div>
+            <div @click="conta('+')" class="numero">+</div>
             <div @click="numero('0')" class="numero">0</div>
             <div @click="virgula()" class="numero">,</div>
             <div @click="result()" class="numero">=</div>
-            <div class="text-end mr-15 numero">{{igual}}</div>
         </div>
      
     </div>
@@ -50,6 +49,12 @@
             this.display += num
         },
 
+        conta(tipo) {
+            this.igual = this.display
+            this.tipo = tipo
+            this.display = ''
+        },
+
 
         limpar() {
             this.display = ""
@@ -63,38 +68,6 @@
             this.tipo = ""
         },
 
-        mais() {
-            this.igual = this.display
-            this.tipo = '+'
-            this.display = ''
-           
-            
-        },
-
-        menos() {
-            this.igual = this.display
-            this.tipo = '-'
-            this.display = ''
-            
-        },
-
-        vezes() {
-            this.igual = this.display
-            this.tipo = 'x'
-            this.display = ''
-        },
-
-        divisao() {
-            this.igual = this.display
-            this.tipo = '/'
-            this.display = ''
-        },
-
-         porcemtagem() {
-            this.igual = this.display
-            this.tipo = '%'
-            this.display = ''
-         },
 
          virgula() {
            this.display += ","
