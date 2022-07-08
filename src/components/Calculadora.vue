@@ -10,7 +10,7 @@
             <div @click="numero('7')" class="numero">7</div>
             <div @click="numero('8')" class="numero">8</div>
             <div @click="numero('9')" class="numero">9</div>
-            <div @click="vezes('x')"  class="numero">x</div>
+            <div @click="conta('x')"  class="numero">x</div>
             <div @click="numero('4')" class="numero">4</div>
             <div @click="numero('5')" class="numero">5</div>
             <div @click="numero('6')" class="numero">6</div>
